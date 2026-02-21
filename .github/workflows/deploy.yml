@@ -4,10 +4,18 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
+# Grant necessary permissions for GitHub Token
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+     # Define the environment for deployment
+    environment:
+    name: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v4
