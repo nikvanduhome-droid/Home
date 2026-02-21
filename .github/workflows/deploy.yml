@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     # Define the environment for deployment
     environment:
-      name: production
+      name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
