@@ -7,22 +7,32 @@ document.addEventListener("DOMContentLoaded", function() {
     if (form) {
         form.addEventListener("submit", function(event) {
             event.preventDefault();
-
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
-            const message = document.getElementById("message");
-
-            // Demo credentials
-            if (username === "homeuser" && password === "1234") {
-                message.style.color = "green";
-                message.textContent = "Login successful! Redirecting...";
-                setTimeout(() => {
-                    window.location.href = "index.html";
-                }, 1500);
-            } else {
-                message.style.color = "red";
-                message.textContent = "Invalid credentials. Try homeuser / 1234";
-            }
+            loginUser();
         });
     }
+});
+
+function loginUser() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const message = document.getElementById("message");
+
+    // Hardcoded credentials
+    const users = {
+        'alice': 'password1',
+        'bob': 'password2',
+        'charlie': 'password3'
+    };
+
+    if (users[username] && users[username] === password) {
+        message.style.color = "green";
+        message.textContent = "Login successful! Redirecting...";
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 1500);
+    } else {
+        message.style.color = "red";
+        message.textContent = "Invalid credentials. Try alice/bob/charlie";
+    }
+}
 });
