@@ -5,6 +5,17 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+# Grant necessary permissions for GitHub Token
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Define the environment for deployment
+environment:
+  name: production
+  url: ${{ steps.deployment.outputs.page_url }}
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
