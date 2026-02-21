@@ -16,7 +16,7 @@ jobs:
         run: |
           sed -i "s/__USER1_USERNAME__/${{ secrets.USER1_USERNAME }}/g" script.js
           sed -i "s/__USER1_PASSWORD__/${{ secrets.USER1_PASSWORD }}/g" script.js
-          sed -i "s/__USER10_USERNAME__/${{ secrets.10_USERNAME }}/g" script.js
+          sed -i "s/__USER10_USERNAME__/${{ secrets.USER10_USERNAME }}/g" script.js
           sed -i "s/__USER10_PASSWORD__/${{ secrets.USER10_PASSWORD }}/g" script.js
 
       - name: Setup Pages
