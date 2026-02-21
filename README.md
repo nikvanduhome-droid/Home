@@ -50,3 +50,11 @@ This repository is designed to:
 <a href="https://github.com/your-username" target="_blank">https://github.com/your-username</a>
 
 ---
+
+## Website Structure
+home-website/
+│
+├── index.html
+├── login.html
+├── style.css
+└── script.js
