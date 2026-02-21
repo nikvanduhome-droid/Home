@@ -71,4 +71,4 @@ home-website/
 ├── index.html
 ├── login.html
 ├── style.css
-└── script.jss
+└── script.js
