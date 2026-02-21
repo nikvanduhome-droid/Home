@@ -7,7 +7,6 @@ function loginUser() {
     const password = document.getElementById("password").value;
     const message = document.getElementById("message");
 
-    // Placeholder for users object - will be replaced by GitHub Actions
     const users = {
         '__USER1_USERNAME__': '__USER1_PASSWORD__',
         '__USER10_USERNAME__': '__USER10_PASSWORD__'
